@@ -24,7 +24,7 @@ jobs:
           node-version: '22'
 
       - name: install newman & htmlextra globally  
-        run:  npm install -g newman && newman-reporter-htmlextra
+        run:  npm install -g newman && newman-reporter-htmlextra 
 
       - name: Run postman collection with newman 
         run: |
