@@ -54,10 +54,10 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ${{secrets.EMIAL_USERNAME}}
+          username: ${{secrets.EMAIL_USERNAME}}
           password: ${{secrets.EMAIL_PASSWORD}}
           subject:  phoenix inwarrenty flow execution notifcation
-          to: ramitasambyal1995@gmail.com
+          to: ramitasambyal2023@gmail.com
           from: ramitasambyal2023@gmail.com
           body: |
                 Hi,
