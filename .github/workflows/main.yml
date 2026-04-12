@@ -31,7 +31,8 @@ jobs:
             newman run 'InWarrenty flow Copy.postman_collection.json' \
             -e phoenix_URL.postman_environment.json \
             -d testdata.csv \
-            -r cli,htmlextra
+            -r cli,htmlextra \
+            --reporter-htmlextra-export ./newman/index.html
 
       - name: Newman Report 
         if: always()
