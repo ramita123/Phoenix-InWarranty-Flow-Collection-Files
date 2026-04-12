@@ -47,6 +47,25 @@ jobs:
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: newman/
+
+      - name: send email notification
+        if: always()
+        uses: dawidd6/action-send-mail@v16
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.EMIAL_USERNAME}}
+          password: ${{secrets.EMAIL_PASSWORD}}
+          subject:  phoenix inwarrenty flow execution notifcation
+          to: ramitasambyal2023@gmail.com
+          from: ramitasambyal@gmail.com
+          body: |
+                Hi,
+                Phoneix inwarrenty flow completetd . Report has been published and url is
+                https://ramita123.github.io/Phoenix-InWarranty-Flow-Collection-Files/
+          
+          
+        
           
         
         
